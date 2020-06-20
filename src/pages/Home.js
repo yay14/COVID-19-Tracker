@@ -40,9 +40,9 @@ class Home extends React.Component {
   render() {
   return (
     <div className="App">
+      <br/>
     <div className="row" >
-      <div className="col"  className='text-center' style={{margin:"15px"}}>
-          <br/>
+      <div className="col" style={{margin:"5px"}}>
       <h4>COVID-19 INDIA
     <ReactCountryFlag  countryCode="IN"
                 svg

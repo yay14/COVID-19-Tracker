@@ -16,6 +16,8 @@ export default function TestedGraph(props)
              dates.push(date),
              testedpositiverate.push(data.testpositivityrate)
            )
+           else
+           return(dates,testedpositiverate)
         })
 
 

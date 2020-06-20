@@ -26,6 +26,12 @@ const tabledata = filterState.map((data,i)=>
         </tr>
         </tbody>
     )
+    else
+    return(
+      <tbody>
+        
+      </tbody>
+    )
 })
 return(
     <div className="col-md-3">
@@ -33,8 +39,8 @@ return(
   <Form.Group controlId="formState">
     <Form.Control size="sm"  type="text" 
     onChange={ e => 
-       { setSearched(e.target.value)
-        }
+        setSearched(e.target.value)
+        
         }
     placeholder="Search any state" />
   </Form.Group>
