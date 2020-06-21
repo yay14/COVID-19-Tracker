@@ -7,6 +7,7 @@ import Axios from 'axios'
 import LiveGraph from '../components/LiveGraph.js'
 import SearchState from '../components/SearchState.js'
 import TestedGraph from '../components/TestedGraph.js'
+import IndiaMap from '../components/IndiaMap.js'
 
 class Home extends React.Component {
   state = {  
@@ -94,7 +95,11 @@ class Home extends React.Component {
   </div>
   <h3>State-wise Count of Corona Cases
 </h3>
-  <SearchState states={this.state.states} />
+  <div className="row">
+    <div className="col"><SearchState states={this.state.states} /></div>
+    <div className="col">
+      <br/><IndiaMap states={this.state.states} /></div>
+  </div>
   </div>
 
   );

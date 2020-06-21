@@ -22,7 +22,7 @@ const tabledata = filterState.map((data,i)=>
           <td>{data.active}</td>
           <td>{data.deaths}</td>
           <td>{data.recovered}</td>
-          <td>{data.lastupdatedtime}</td>
+          
         </tr>
         </tbody>
     )
@@ -45,7 +45,7 @@ return(
     placeholder="Search any state" />
   </Form.Group>
   </Form>
- <Table responsive='sm'>
+ <Table responsive='sm' bordered>
  <thead>
    <tr>
     <th>STATE/UT</th>
@@ -53,7 +53,7 @@ return(
      <th>ACTIVE</th>
      <th>DECEASED</th>
      <th>RECOVERED</th>
-     <th>AS ON</th>
+    
    </tr>
  </thead>
  {tabledata}
