@@ -8,6 +8,7 @@ import LiveGraph from '../components/LiveGraph.js'
 import SearchState from '../components/SearchState.js'
 import TestedGraph from '../components/TestedGraph.js'
 import IndiaMap from '../components/IndiaMap.js'
+import footer from '../footer.js'
 
 class Home extends React.Component {
   state = {  
@@ -100,6 +101,7 @@ class Home extends React.Component {
     <div className="col">
       <br/><IndiaMap states={this.state.states} /></div>
   </div>
+  <footer/>
   </div>
 
   );

@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: linear-gradient(to right,rgb(221, 233, 200),rgb(159, 206, 245));
- 
+  min-height: 100%;
   font: italic 1.2em "Fira Sans", serif;
 }
 

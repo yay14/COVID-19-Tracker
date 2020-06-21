@@ -9,8 +9,42 @@ nav {
   min-height: "30vh";
   padding-top:5px ;
   padding-bottom: 10px ;
+  background: darkmagenta;
+  color: crimson;
+}
+
+foot{
+  display: list-item;
+  justify-content: center;
+  font: small-caps bold 24px/1 sans-serif;
+  align-items: center;
+  min-height: "30vh";
+  padding-top:5px ;
+  padding-left: 500px;
+  padding-bottom: 10px ;
   background: #AB8FEC;
   color: crimson;
+}
+footerL{
+  display: list-item;
+  justify-content: start;
+  min-height: "10vh";
+  padding-bottom: 10px;
+  padding-top: 5px;
+  padding-left: 20px;
+  background: darkmagenta;
+  color: black;
+  font: caption;
+  border: blueviolet;
+}
+footerR{
+  display: flex;
+  justify-content: center;
+  min-height: "10vh";
+  background: darkmagenta;
+  color: black;
+  font: caption;
+  border: blueviolet;
 }
 
 .nav-links
