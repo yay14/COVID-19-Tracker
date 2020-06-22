@@ -45,7 +45,7 @@ return(
     placeholder="Search any state" />
   </Form.Group>
   </Form>
-  <div style={{overflow:"auto",maxHeight:"1500px",maxWidth: "1000px"}}>
+  <div style={{overflow:"auto",maxHeight:"600px",maxWidth: "100%"}}>
  <Table responsive='sm' bordered hover>
  <thead>
    <tr>

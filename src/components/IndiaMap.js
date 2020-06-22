@@ -200,7 +200,7 @@ const dataSource = {
     const chartConfigs = {
         type: 'India',
         width : "100%",
-        height: "1000%",
+        height: "500%",
         dataFormat: 'json',
         dataSource: dataSource ,
       };
