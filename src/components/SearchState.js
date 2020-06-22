@@ -34,7 +34,7 @@ const tabledata = filterState.map((data,i)=>
     )
 })
 return(
-    <div className="col-md-3">
+    <div className="col">
     <Form>
   <Form.Group controlId="formState">
     <Form.Control size="sm"  type="text" 
@@ -45,7 +45,8 @@ return(
     placeholder="Search any state" />
   </Form.Group>
   </Form>
- <Table responsive='sm' bordered>
+  <div style={{overflow:"auto",maxHeight:"1500px",maxWidth: "1000px"}}>
+ <Table responsive='sm' bordered hover>
  <thead>
    <tr>
     <th>STATE/UT</th>
@@ -56,8 +57,9 @@ return(
     
    </tr>
  </thead>
- {tabledata}
+  {tabledata}
  </Table>
+ </div> 
  </div>
   )
 }

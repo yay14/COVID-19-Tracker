@@ -44,15 +44,15 @@ class Home extends React.Component {
     <div className="App">
       <br/>
     <div className="row" >
-      <div className="col" style={{margin:"5px"}}>
-      <h4>COVID-19 INDIA
+      <div className="col">
+      <h3>COVID-19 INDIA
     <ReactCountryFlag  countryCode="IN"
                 svg
                 style={{
                     width: '1.5em',
                     height: '1.5em',
                 }}
-                title="IN"/></h4>
+                title="IN"/></h3>
       </div>
      
       <div className="col">

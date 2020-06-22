@@ -5,13 +5,15 @@ import Emoji from 'a11y-react-emoji'
 
 export default function Nav() { 
     return (
+      <div>
       <nav>
-       <h3>Corona-Virus<Emoji symbol="☠️"></Emoji> ​​ Tracker</h3>
+       {/*<h3>Corona-Virus<Emoji symbol="☠️"></Emoji> ​​ Tracker</h3>*/}
        <ul className="nav-links"> 
        <Link to='/' style={{color:"white", textDecoration: "none"}}><li>Home <Emoji symbol="🌍" /></li></Link>
        <Link to='/about' style={{color:"white", textDecoration: "none"}}><li>About</li></Link>
        </ul>
       </nav>
+      </div>
     );
   }
   

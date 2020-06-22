@@ -5,8 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to right,rgb(221, 233, 200),rgb(159, 206, 245));
+  overflow-x: hidden;
+  /*background-image: linear-gradient(to right,rgb(221, 233, 200),rgb(159, 206, 245));*/
   min-height: 100%;
+  width: 100%;
   font: italic 1.2em "Fira Sans", serif;
 }
 

@@ -2,28 +2,30 @@
   text-align: center;
 }
 
-nav {
-  display : flex;
-  justify-content: space-evenly;
-  align-items: center;
+nav{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 0px;
   min-height: "30vh";
   padding-top:5px ;
   padding-bottom: 10px ;
-  background: darkmagenta;
-  color: crimson;
+  padding-right: 25px;
+  background: dimgrey;
+  color: whitesmoke;
 }
 
 foot{
-  display: list-item;
+  display: flex;
+  align-items: center;
+  width: 100%;
   justify-content: center;
   font: small-caps bold 24px/1 sans-serif;
-  align-items: center;
   min-height: "30vh";
   padding-top:5px ;
-  padding-left: 500px;
   padding-bottom: 10px ;
-  background: #AB8FEC;
-  color: crimson;
+  background: gray;
+  color: black;
 }
 footerL{
   display: list-item;
@@ -32,7 +34,7 @@ footerL{
   padding-bottom: 10px;
   padding-top: 5px;
   padding-left: 20px;
-  background: darkmagenta;
+  background: dimgrey;
   color: black;
   font: caption;
   border: blueviolet;
@@ -41,7 +43,8 @@ footerR{
   display: flex;
   justify-content: center;
   min-height: "10vh";
-  background: darkmagenta;
+  background: dimgrey;
+  
   color: black;
   font: caption;
   border: blueviolet;
@@ -55,3 +58,48 @@ footerR{
   display: flex;
   list-style: none;
 }
+td {
+  
+ 
+}
+table.scrolldown { 
+  width: 100%; 
+    
+  /* border-collapse: collapse; */ 
+  border-spacing: 0; 
+  border: 2px solid black; 
+} 
+
+/* To display the block as level element */ 
+table.scrolldown tbody, table.scrolldown thead { 
+  display: block; 
+}  
+
+thead tr th { 
+  height: 40px;  
+  line-height: 40px; 
+} 
+
+table.scrolldown tbody { 
+    
+  /* Set the height of table body */ 
+  height: 50px;  
+    
+  /* Set vertical scroll */ 
+  overflow-y: auto; 
+    
+  /* Hide the horizontal scroll */ 
+  overflow-x: hidden;  
+} 
+
+tbody {  
+  border-top: 2px solid black; 
+} 
+
+tbody td, thead th { 
+  width : 200px; 
+  border-right: 2px solid black; 
+} 
+td { 
+  text-align:center; 
+} 
