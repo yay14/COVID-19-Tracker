@@ -1,6 +1,4 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card'
-import CardDeck from 'react-bootstrap/CardDeck'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ReactCountryFlag from "react-country-flag"
 import Axios from 'axios'
@@ -8,7 +6,8 @@ import LiveGraph from '../components/LiveGraph.js'
 import SearchState from '../components/SearchState.js'
 import TestedGraph from '../components/TestedGraph.js'
 import IndiaMap from '../components/IndiaMap.js'
-import footer from '../footer.js'
+import About from '../components/About.js'
+import CardsIndia from '../components/CardsIndia'
 
 class Home extends React.Component {
   state = {  
@@ -17,6 +16,7 @@ class Home extends React.Component {
     times: [],
     tested: []
   }
+  
   componentDidMount() {
   
   Axios.get(`https://api.covid19india.org/data.json`).then(
@@ -42,68 +42,53 @@ class Home extends React.Component {
   render() {
   return (
     <div className="App">
-      <br/>
-    <div className="row" >
-      <div className="col">
-      <h3>COVID-19 INDIA
-    <ReactCountryFlag  countryCode="IN"
-                svg
-                style={{
+      <div className="wrap">
+        <div  id="home" >
+          <div className="row headerarea">
+            <div className="col"  class="logo">
+              <h3>LIVE : Corona-Virus in INDIA
+                <ReactCountryFlag countryCode="IN"
+                  svg
+                  style={{
                     width: '1.5em',
                     height: '1.5em',
-                }}
-                title="IN"/></h3>
-      </div>
-     
-      <div className="col">
-                <h6>(Last updated on {this.state.total.time})</h6>
-      </div>
-      </div>
-    <CardDeck>
-  <Card bg='secondary' text='white' className='text-center' style={{margin:"5px"}}>
-    <Card.Body>
-      <Card.Title>Total Confirmed Cases</Card.Title>
-      <Card.Text>
-        {this.state.total.confirmed}
-      </Card.Text>
-    </Card.Body> 
-  </Card>
-  <Card bg='danger' text='white' className='text-center' style={{margin:"5px"}}>
-    <Card.Body>
-      <Card.Title>Total Deaths</Card.Title>
-      <Card.Text>
-        {this.state.total.deaths}
-      </Card.Text>
-    </Card.Body>
-  </Card>
-  <Card bg='success' text='white' className='text-center' style={{margin:"5px"}}>
-    <Card.Body>
-      <Card.Title>Total Recovered</Card.Title>
-      <Card.Text>
-     {this.state.total.recovered}
-      </Card.Text>
-    </Card.Body>
-  </Card>
-</CardDeck>
-<div className="row" >
-<div  className="col">
-  <h4>New cases, Recovered, Deaths overtime</h4>
-  <LiveGraph times={this.state.times} /></div>
-  <div  className="col">
-    <h4>Rate of growth of Corona Positively Tested</h4>
-  <TestedGraph tested={this.state.tested} />
-  </div>
-  </div>
-  <h3>State-wise Count of Corona Cases
-</h3>
-  <div className="row">
-    <div className="col"><SearchState states={this.state.states} /></div>
-    <div className="col">
-      <br/><IndiaMap states={this.state.states} /></div>
-  </div>
-  <footer/>
-  </div>
+                  }}
+                  title="IN" />
+              </h3>
+            </div>
 
+            <div className="col">
+              <h6>(Last updated on {this.state.total.time})</h6>
+            </div>
+          </div>
+          <hr/>
+         
+          <div className=" homearea">
+            <CardsIndia tot={this.state.total} />
+          </div>
+          </div>
+          <div className="row chartsarea" id="charts">
+            <div className="col">
+              <h4>New cases, Recovered, Deaths overtime</h4>
+              <LiveGraph times={this.state.times} /></div>
+            <div className="col">
+              <h4>Rate of growth of Corona Positively Tested</h4>
+              <TestedGraph tested={this.state.tested} />
+            </div>
+          </div >
+          
+         
+            <div className= "distrarea " id="distr"><SearchState states={this.state.states} /></div>
+            <div className="mapsarea" id="maps">
+              <br /><IndiaMap states={this.state.states} /></div>
+         
+          <hr />
+          <div className="aboutarea" id="about">
+            <About />
+          </div>
+        
+      </div>
+      </div>
   );
 }
 }

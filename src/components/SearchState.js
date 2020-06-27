@@ -34,10 +34,12 @@ const tabledata = filterState.map((data,i)=>
     )
 })
 return(
-    <div className="col">
+    <div className="col-10">
+       <h3>State-wise Count of Corona Cases</h3>
+       <div style={{maxHeight:"500px",maxWidth: "1000px"}}>
     <Form>
   <Form.Group controlId="formState">
-    <Form.Control size="sm"  type="text" 
+    <Form.Control  type="text" 
     onChange={ e => 
         setSearched(e.target.value)
         
@@ -45,9 +47,11 @@ return(
     placeholder="Search any state" />
   </Form.Group>
   </Form>
-  <div style={{overflow:"auto",maxHeight:"600px",maxWidth: "100%"}}>
+  </div>
+  <div style={{overflow:"auto",maxHeight:"500px",maxWidth: "1000px"}}>
+
  <Table responsive='sm' bordered hover>
- <thead>
+ <thead >
    <tr>
     <th>STATE/UT</th>
      <th>CONFIRMED</th>

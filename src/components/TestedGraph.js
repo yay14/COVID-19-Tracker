@@ -10,7 +10,7 @@ export default function TestedGraph(props)
     const testedpositiverate=[];
     data.map(data =>
         {
-            var date = moment(data.updatetimestamp,'DD/MM/YYYY HH:mm:ss').format('DD/MM/YY');
+            var date = moment(data.updatetimestamp,'DD/MM/YYYY HH:mm:ss').format('LL');
             if(data.testpositivityrate!=="")
            return( 
              dates.push(date),
@@ -37,7 +37,7 @@ export default function TestedGraph(props)
       curve: 'smooth'
     },
     xaxis: {
-      type: 'date',
+      type: 'datetime',
       categories: dates
     },
     tooltip: {

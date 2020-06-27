@@ -1,53 +1,56 @@
 .App {
+  display: flex;
   text-align: center;
+  flex-direction: column;
+  min-height: 100vh;
 }
-
+.wrap{
+  Flex:1;
+}
+html{
+  scroll-behavior: smooth;
+}
+body::-webkit-scrollbar
+{
+  width: 0.25%;
+}
+body::-webkit-scrollbar-track
+{
+background: black;
+}
+body::-webkit-scrollbar-thumb
+{
+background:#80CBC4;
+}
+body div::-webkit-scrollbar{
+  width: 0.25rem;
+  height: 0.25rem;
+}
+body div::-webkit-scrollbar-thumb{
+  background: #80CBC4;
+}
+body div::-webkit-scrollbar-track{
+  background: black;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+a:hover
+{
+  color: black;
+  text-decoration: none;
+}
 nav{
   width: 100%;
   display: flex;
-  justify-content: flex-end;
-  padding-right: 0px;
-  min-height: "30vh";
+  font-family: 'Tinos', serif;
   padding-top:5px ;
-  padding-bottom: 10px ;
-  padding-right: 25px;
-  background: dimgrey;
+  background: rgb(51, 48, 48);
   color: whitesmoke;
-}
-
-foot{
-  display: flex;
-  align-items: center;
-  width: 100%;
-  justify-content: center;
-  font: small-caps bold 24px/1 sans-serif;
-  min-height: "30vh";
-  padding-top:5px ;
-  padding-bottom: 10px ;
-  background: gray;
-  color: black;
-}
-footerL{
-  display: list-item;
-  justify-content: start;
-  min-height: "10vh";
-  padding-bottom: 10px;
-  padding-top: 5px;
-  padding-left: 20px;
-  background: dimgrey;
-  color: black;
-  font: caption;
-  border: blueviolet;
-}
-footerR{
-  display: flex;
-  justify-content: center;
-  min-height: "10vh";
-  background: dimgrey;
-  
-  color: black;
-  font: caption;
-  border: blueviolet;
+  position: fixed;
+  flex-wrap: wrap;
+  z-index: 1;
 }
 
 .nav-links
@@ -58,48 +61,110 @@ footerR{
   display: flex;
   list-style: none;
 }
-td {
-  
- 
+
+navigate{
+  width: 100%;
+  display: flex;
+  height: "10vh";
+  font-family:'Istok Web', sans-serif;
+  padding-top: 10px;
+  background: rgb(243, 239, 239);
+  color: rgb(12, 12, 12);
+  position: relative;
 }
-table.scrolldown { 
-  width: 100%; 
-    
-  /* border-collapse: collapse; */ 
-  border-spacing: 0; 
-  border: 2px solid black; 
-} 
+.navg-links
+{
+  width: 100% ;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 150px;
+  padding-right: 150px;
+  list-style: none;
+  display: flex;
+  list-style: none;
+}
 
-/* To display the block as level element */ 
-table.scrolldown tbody, table.scrolldown thead { 
-  display: block; 
-}  
+.foot{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  font: small-caps bold 24px/1 sans-serif;
 
-thead tr th { 
-  height: 40px;  
-  line-height: 40px; 
-} 
+  
+  background: rgb(122, 211, 196);;
+  color: rgb(12, 12, 12);
 
-table.scrolldown tbody { 
-    
-  /* Set the height of table body */ 
-  height: 50px;  
-    
-  /* Set vertical scroll */ 
-  overflow-y: auto; 
-    
-  /* Hide the horizontal scroll */ 
-  overflow-x: hidden;  
-} 
+}
+ .footerL{
+  display: list-item;
+  justify-content: start;
+  min-height: "10vh";
+  padding-bottom: 10px;
+  padding-top: 5px;
+  margin-top: auto;
+  padding-left: 20px;
+  background: rgb(18, 131, 120);
+  color: black;
+  font: caption;
+  
+}
+.footerR{
+  display: flex;
+  justify-content: center;
+  min-height: "10vh";
+  background: rgb(18, 131, 120);;
+  margin-top: auto;
+  color: black;
+  font: caption;
+  border: blueviolet;
+}
+.headerarea
+{
+  display: flex;
+align-items: center;
+   
+padding-left:200px;
+}
+.mapsarea
+{
+ 
+align-items: center;
+padding-top: 50px;
+padding-bottom: 30vh;
+width: 100;
+padding-left: 180px;
 
-tbody {  
-  border-top: 2px solid black; 
 } 
+ .aboutarea
+{
+ 
+display: flex;
+align-items: center;
+padding-top: 50px;
+padding-bottom: 30vh;
+flex-wrap: wrap;
+flex-direction: row;
+width: 100;
+padding-left: 80px;
 
-tbody td, thead th { 
-  width : 200px; 
-  border-right: 2px solid black; 
-} 
-td { 
-  text-align:center; 
-} 
+}
+.homearea, .chartsarea 
+{
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding-top: 30vh;
+padding-bottom: 30vh;
+padding-left: 80px;
+flex-wrap: wrap;
+flex-direction: row;
+width: 100;
+
+}
+ .distrarea
+ {
+   padding-left: 80px;
+   padding-top: 100px;
+   
+ }

@@ -1,21 +1,28 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Home from './pages/Home.js'
-import About from './pages/About.js'
-import Nav from './Nav.js'
+import World from './pages/World.js'
+import Footer from './Footer'
 import { BrowserRouter as Router,Switch,Route } from "react-router-dom";
+import SideNav from './SideNav'
+
 
 export default function App() { 
   return (
-    <Router>
     <div>
-      <Nav/>
+    <Router>
+    <SideNav/>
+     
       <Switch>
       <Route exact path="/" component={Home}/>
-      <Route path="/about" component={About}/>
+      <Route path="/global" component={World}/>
+    
       </Switch>
-    </div>
+      <Footer/>
+     
     </Router>
+   
+    </div>
     
   );
 }
