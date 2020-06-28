@@ -24,28 +24,28 @@ const dataSource = {
             subcaption: "2020",
             includevalueinlabels: "1",
             labelsepchar: ": ",
-            entityFillHoverColor: "#FFF9C4",
+            entityFillHoverColor: "#f7f5f7",
             theme: "fusion"
         },
         colorrange: {
             minvalue: "0",
-            code: "#7CFC00",
+            code: "#82ed9d",
             gradient: "1",
             color: [
                 {
                     minvalue: "0.0",
                     maxvalue: "500.0",
-                    color: "#7CFC00"
+                    color: "#3df56c"
                 },
                 {
                     minvalue: "500.0",
                     maxvalue: "25000.0",
-                    color: "#FF8C00"
+                    color: "#fab561"
                 },
                 {
                     minvalue: "25000.0",
                     maxvalue: "400000.0",
-                    color: "#FF0000	"
+                    color: "#f54c4c"
                 }
             ]
         },
