@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 
-export default function Footer() {
+export default function Foot() {
 return(
 <div style={{marginLeft: "80px"}}>
  <div className="footerL">

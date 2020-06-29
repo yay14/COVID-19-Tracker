@@ -2,7 +2,7 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Home from './pages/Home.js'
 import World from './pages/World.js'
-import Footer from './Footer'
+import Foot from './Foot'
 import { BrowserRouter as Router,Switch,Route } from "react-router-dom";
 import SideNav from './SideNav'
 
@@ -18,7 +18,7 @@ export default function App() {
       <Route path="/global" component={World}/>
     
       </Switch>
-      <Footer/>
+      <Foot/>
      
     </Router>
    

@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Table from 'react-bootstrap/Table'
 import Form from 'react-bootstrap/Form'
+import ReactCountryFlag from "react-country-flag"
 
 export default function CountriesTable(props)
 {
@@ -26,7 +27,7 @@ const tabledata = filterCountry.map((data,i)=>
     return(
         <tbody>
         <tr>
-          <td>{data.Country}</td>
+    <td>{data.Country} {<ReactCountryFlag countryCode={data.CountryCode} svg/>}</td>
           <td>{data.TotalConfirmed}</td>
           <td>{data.TotalDeaths}</td>
           <td>{data.TotalRecovered}</td>

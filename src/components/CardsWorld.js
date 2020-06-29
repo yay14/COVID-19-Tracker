@@ -23,7 +23,9 @@ const useStyles = makeStyles({
 export default function CardsWorld(props) {
     const  data  = props.tot;
     const classes = useStyles();
-    var date = moment(data.date,'DD/MM/YYYY HH:mm:ss').format('LL');
+    var time1 = moment(data.date, "YYYY-MM-DDTHH:mm:ss.SSS");
+    var date = moment(time1,'DD/MM/YYYY HH:mm:ss.SSS').format('LL');
+    console.log(date);
     if(!data.confirmed){
         return('Loading...')
       };
