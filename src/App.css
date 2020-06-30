@@ -62,7 +62,7 @@ a:hover
   font-family: 'Roboto Slab', serif;
 
   
-  background: rgb(122, 211, 196);;
+  background: #80CBC4;
   color: rgb(12, 12, 12);
 
 }
@@ -156,4 +156,31 @@ width: 100;
   padding-left: 230px;
   padding-right: 100px;
   padding-top: 10vh;
+ }
+  
+ @media only screen and (max-width:800px)
+ {
+   .chartsarea,.aboutarea,.mapsarea,.distrarea,.homearea
+   {
+    padding-left: 10vw;
+    padding-right: 0vw;
+    padding-top: 0vh;
+   }
+   .nav-links
+   {
+    font-size: 1rem;
+    margin-bottom: auto;
+    justify-content: flex-end;
+    align-items: center;
+    display: flex;
+    margin-right: 0px;
+    list-style: none;
+   }
+   .headerarea
+   {
+     display: flex;
+   align-items: center;   
+   padding-left:20vw;
+   text-align: center;
+   }
  }
