@@ -48,7 +48,7 @@ return(
   </Form.Group>
   </Form>
   </div>
-  <div style={{overflow:"auto",maxHeight:"500px",maxWidth: "1000px"}}>
+  <div style={{ overflow:"auto",maxHeight:"500px",maxWidth: "1000px"}}>
 
  <Table responsive='sm' bordered hover>
  <thead >

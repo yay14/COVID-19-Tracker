@@ -30,7 +30,7 @@ export default function WorldMap(props){
         ]}
         chartType="GeoChart"
         width="100%"
-        height="600px"
+        height="500px"
         options={{
             // region: 'IT',
             // displayMode: 'markers',

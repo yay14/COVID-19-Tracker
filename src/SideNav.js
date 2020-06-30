@@ -22,7 +22,7 @@ export default function SideNav()
       </div>
                     <div className="row">
                         <ul className="col nav-links">
-                            <Link to='/' style={{ color: "white", textDecoration: "none" }}><li>India <Emoji symbol="🌍" /></li></Link>
+                            <Link to='/' style={{ color: "white", textDecoration: "none" }}><li>India  <Emoji symbol="🌍" /></li></Link>
                             <Link to='/global' style={{ color: "white", textDecoration: "none" }}><li>Global</li></Link>
                         </ul>
                     </div>

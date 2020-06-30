@@ -1,4 +1,4 @@
-import React from 'react';
+import React  from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import ReactCountryFlag from "react-country-flag"
 import Axios from 'axios'
@@ -8,15 +8,18 @@ import TestedGraph from '../components/TestedGraph.js'
 import IndiaMap from '../components/IndiaMap.js'
 import About from '../components/About.js'
 import CardsIndia from '../components/CardsIndia'
+import ScaleLoader from "react-spinners/ScaleLoader"
 
 class Home extends React.Component {
   state = {  
     total: {},
     states: [],
     times: [],
-    tested: []
+    tested: [],
+    load: "true"
   }
   
+
   componentDidMount() {
   
   Axios.get(`https://api.covid19india.org/data.json`).then(
@@ -35,6 +38,7 @@ class Home extends React.Component {
       this.setState({states:statess});
       this.setState({times:timeseries});
       this.setState({tested:tests});
+      this.setState({load:false})
     }
     );
   }
@@ -62,16 +66,25 @@ class Home extends React.Component {
             </div>
           </div>
           <hr/>
+          <br/>
+            <div style={{justifyContent:"center",display:"flex"}}>
+              <ScaleLoader
+           
+                size={50}
+                color={"#004D40"}
+                loading={this.state.load}
+              />
+            </div>
          
           <div className=" homearea">
             <CardsIndia tot={this.state.total} />
           </div>
           </div>
           <div className="row chartsarea" id="charts">
-            <div className="col">
+            <div className="col-sm-6">
               <h4>New cases, Recovered, Deaths overtime</h4>
               <LiveGraph times={this.state.times} /></div>
-            <div className="col">
+            <div className="col-sm-6">
               <h4>Rate of growth of Corona Positively Tested</h4>
               <TestedGraph tested={this.state.tested} />
             </div>

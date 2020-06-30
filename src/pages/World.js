@@ -1,61 +1,106 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Axios from 'axios'
-
+import ScaleLoader from "react-spinners/ScaleLoader"
+import moment from 'moment';
 import About from '../components/About.js'
 import CardsWorld from '../components/CardsWorld'
 import CountriesTable from '../components/CountriesTable'
 import WorldMap from '../components/WorldMap'
+import CountryPicker from "../components/CountryPicker"
+import WorldCharts from "../components/WorldCharts"
+
 
 class World extends React.Component {
   state = {  
     total: [],
-    newcases: [],
     countries: [],
     date: [],
+    global: [],
+    pickedCountry: "",
+    load: "true"
   }
-  /*"NewConfirmed": 191909,
-"TotalConfirmed": 9905480,
-"NewDeaths": 4873,
-"TotalDeaths": 502735,
-"NewRecovered": 106636,
-"TotalRecovered": 4944906*/
+
   componentDidMount() {
   
   Axios.get(`https://api.covid19api.com/summary`).then(
     res => { 
-     console.log(res);
+    
     let tot = {
      confirmed: res.data.Global.TotalConfirmed,
      deaths: res.data.Global.TotalDeaths,
      recovered: res.data.Global.TotalRecovered,  
-    date: res.data.Date,
+     date: res.data.Date,
        
       todconfirmed: res.data.Global.NewConfirmed,
       toddeaths: res.data.Global.NewDeaths,
       todrecovered: res.data.Global.NewRecovered, 
        };  
-       let today ={
-        confirmed: res.data.Global.NewConfirmed,
-        deaths: res.data.Global.NewDeaths,
-        recovered: res.data.Global.NewRecovered,  
-       }
+      
        this.setState({total:tot});
+       this.setState({global:tot});
+       console.log(global);
     let Countries=res.data.Countries;
      let Date=res.data.Date;
     //  const dates=new Date(parseInt(Date));
     //  const lastUpdated= dates.toString();
     this.setState({countries:Countries});
      this.setState({date:Date});
-     this.setState({newcases:today});
+     
+     this.setState({load:false})
+     
     //  console.log(Countries);
     //  console.log(today)
     //  console.log(tot);
     }
     );
   }
- 
+  
+  handleCountryChange = async (pickedCountry) =>{
+    if(pickedCountry!=="")
+    {
+    const chosen = this.state.countries.filter((data,i)=>{
+      return(
+        data.Country===pickedCountry
+      )
+    })
+    let tot = {
+     
+      confirmed: chosen[0].TotalConfirmed,
+      deaths: chosen[0].TotalDeaths,
+      recovered: chosen[0].TotalRecovered,
+      date: this.state.date,
+      todconfirmed: chosen[0].NewConfirmed,
+      toddeaths: chosen[0].NewDeaths,
+      todrecovered: chosen[0].NewRecovered,  
+    }; 
+    this.setState({ total:tot });  
+    console.log(this.state.total);
+  }
+  else{
+    console.log(this.state.global);
+    const country=this.state.global;
+    let tot = {
+      confirmed: country.confirmed,
+      deaths: country.deaths,
+      recovered: country.recovered,
+      date: this.state.date,
+      todconfirmed: country.todconfirmed,
+      toddeaths: country.toddeaths,
+      todrecovered: country.todrecovered, 
+    }; 
+    this.setState({total:tot}); 
+    
+    console.log(this.state.total); 
+   
+  }
+    
+    
+    
+  }
   render() {
+    var time1 = moment(this.state.date, "YYYY-MM-DDTHH:mm:ss.SSS");
+    var date = moment(time1,'DD/MM/YYYY HH:mm:ss.SSS').format('LL');
   return (
     <div className="App">
       <div className="wrap">
@@ -64,29 +109,44 @@ class World extends React.Component {
             <div className="col">
               <h3>LIVE : Worldwide Spread of Corona-Virus <span aria-hidden="true" role="img">🌐</span></h3>
             </div>
+         
             <div className="col">
-              <h6>(Last updated on {(this.state.date).toString()})</h6>
+              <h6>(Last updated on {date})</h6>
             </div>
+            
           </div>
           <hr/>
-         
+          <br/>
+            <div style={{justifyContent:"center",display:"flex"}}>
+              <ScaleLoader
+           
+                size={50}
+                color={"#004D40"}
+                loading={this.state.load}
+              />
+            </div>
+            <div >
+                <CountryPicker data={this.state.countries}  handleCountryChange={this.handleCountryChange}/>
+            </div>
+           
+
           <div className=" homearea">
             <CardsWorld tot={this.state.total} />
           </div>
           </div>
-          {/* <div className="row chartsarea" id="charts">
-            <div className="col">
-              <h4>New cases, Recovered, Deaths overtime</h4>
-              <LiveGraph times={this.state.times} /></div>
-            <div className="col">
-              <h4>Rate of growth of Corona Positively Tested</h4>
-              <TestedGraph tested={this.state.tested} />
-            </div>
-          </div > */}
+       
+           <div className="row chartsarea" id="charts" style={{display: "flex" ,justifyContent: "center" ,minWidth: "500px",minHeight: "500px"}}>
           
+          <WorldCharts tot={this.state.total}/>
+          </div > 
+           
          
             <div className= "distrarea " id="distr"><CountriesTable country={this.state.countries} /></div> 
+           <hr/>
+           <br/>
+           
            <div className= "mapsarea " id="maps">
+           <h3>WORLD TRENDS OF CORONA-VIRUS</h3>
               <br /><WorldMap country={this.state.countries} /></div> 
          
           <hr />

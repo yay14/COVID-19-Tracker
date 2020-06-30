@@ -55,32 +55,6 @@ export default function CardsIndia(props) {
                 </Card>
             </div>
             <div className="col-md-4">
-                <Card className={classes.root} style={{borderBottom: "10px solid rgba(255,0,0,0.5)" }} variant="outlined">
-                    <CardContent>
-                        <Typography className={classes.title} gutterBottom>
-                            Deceased
-          </Typography>
-                        <hr />
-                        <Typography className={classes.title}>
-                        <CountUp
-                                start={0}
-                                end={data.deaths}
-                                duration={3}
-                                separator=","
-                            />
-                        </Typography>
-                        <Typography className={classes.pos} color="textSecondary">
-                            As on {date}
-          </Typography>
-                        <Typography variant="body2" component="p">
-                            Total Deaths due to COVID-19
-          </Typography>
-                    </CardContent>
-                   
-
-                </Card>
-            </div>
-            <div className="col-md-4">
                 <Card className={classes.root} variant="outlined" style={{borderBottom: "10px solid rgba(0,255,0,0.5)" }}>
                     <CardContent>
                         <Typography className={classes.title} gutterBottom>
@@ -107,6 +81,33 @@ export default function CardsIndia(props) {
                 </Card>
             </div>
 
+            <div className="col-md-4">
+                <Card className={classes.root} style={{borderBottom: "10px solid rgba(255,0,0,0.5)" }} variant="outlined">
+                    <CardContent>
+                        <Typography className={classes.title} gutterBottom>
+                            Deceased
+          </Typography>
+                        <hr />
+                        <Typography className={classes.title}>
+                        <CountUp
+                                start={0}
+                                end={data.deaths}
+                                duration={3}
+                                separator=","
+                            />
+                        </Typography>
+                        <Typography className={classes.pos} color="textSecondary">
+                            As on {date}
+          </Typography>
+                        <Typography variant="body2" component="p">
+                            Total Deaths due to COVID-19
+          </Typography>
+                    </CardContent>
+                   
+
+                </Card>
+            </div>
+           
         </div>
     )
 } 

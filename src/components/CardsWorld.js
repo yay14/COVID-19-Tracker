@@ -7,6 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import moment from 'moment';
 import CountUp from 'react-countup'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 const useStyles = makeStyles({
     root: {
@@ -52,41 +53,20 @@ export default function CardsWorld(props) {
                             As on {date}
                         </Typography>
                         <Typography color="secondary" gutterBottom>
-                            + {data.todconfirmed}
+                            +
+                            
+                             <CountUp
+                                start={0}
+                                end= {data.todconfirmed}
+                                duration={3}
+                                separator=","
+                            />
+                           
                         </Typography>
                         <Typography variant="body2" component="p">
                             Total Cases of COVID-19
           </Typography>
                     </CardContent>
-                </Card>
-            </div>
-            <div className="col-md-4">
-                <Card className={classes.root} style={{borderBottom: "10px solid rgba(255,0,0,0.5)" }} variant="outlined">
-                    <CardContent>
-                        <Typography className={classes.title} gutterBottom>
-                            Deceased
-          </Typography>
-                        <hr />
-                        <Typography className={classes.title}>
-                        <CountUp
-                                start={0}
-                                end={data.deaths}
-                                duration={3}
-                                separator=","
-                            />
-                        </Typography>
-                        <Typography className={classes.pos} color="textSecondary">
-                            As on {date}
-                        </Typography>
-                        <Typography color="error" gutterBottom>
-                            + {data.toddeaths}
-                        </Typography>
-                        <Typography variant="body2" component="p">
-                            Total Deaths due to COVID-19
-          </Typography>
-                    </CardContent>
-                   
-
                 </Card>
             </div>
             <div className="col-md-4">
@@ -108,7 +88,13 @@ export default function CardsWorld(props) {
                             As on {date}
                         </Typography>
                         <Typography color="primary" gutterBottom>
-                            + {data.todrecovered}
+                            +
+                            <CountUp
+                                start={0}
+                                end= {data.todrecovered}
+                                duration={3}
+                                separator=","
+                            />
                         </Typography>
                         <Typography variant="body2" component="p">
                             Total Recoveries from COVID-19
@@ -118,6 +104,42 @@ export default function CardsWorld(props) {
 
                 </Card>
             </div>
+            <div className="col-md-4">
+                <Card className={classes.root} style={{borderBottom: "10px solid rgba(255,0,0,0.5)" }} variant="outlined">
+                    <CardContent>
+                        <Typography className={classes.title} gutterBottom>
+                            Deceased
+          </Typography>
+                        <hr />
+                        <Typography className={classes.title}>
+                        <CountUp
+                                start={0}
+                                end={data.deaths}
+                                duration={3}
+                                separator=","
+                            />
+                        </Typography>
+                        <Typography className={classes.pos} color="textSecondary">
+                            As on {date}
+                        </Typography>
+                        <Typography color="error" gutterBottom>
+                            +
+                            <CountUp
+                                start={0}
+                                end= {data.toddeaths}
+                                duration={3}
+                                separator=","
+                            />   
+                        </Typography>
+                        <Typography variant="body2" component="p">
+                            Total Deaths due to COVID-19
+          </Typography>
+                    </CardContent>
+                   
+
+                </Card>
+            </div>
+          
 
         </div>
         
