@@ -125,6 +125,7 @@ class World extends React.Component {
                 loading={this.state.load}
               />
             </div>
+      
             <div >
                 <CountryPicker data={this.state.countries}  handleCountryChange={this.handleCountryChange}/>
             </div>

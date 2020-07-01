@@ -75,7 +75,7 @@ class Home extends React.Component {
                 loading={this.state.load}
               />
             </div>
-         
+            
           <div className=" homearea">
             <CardsIndia tot={this.state.total} />
           </div>

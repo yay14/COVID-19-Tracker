@@ -32,36 +32,19 @@ body div::-webkit-scrollbar-thumb{
 body div::-webkit-scrollbar-track{
   background: black;
 }
-a{
-  color: black;
-  text-decoration: none;
+.footer{
+  margin-left: 80px;
+  margin-right: 0em;
 }
-a:hover
-{
-  color: black;
-  text-decoration: none;
-}
-
-.nav-links
-{
-  font-size: 1.5rem;
-  margin-bottom: auto;
-  justify-content: flex-end;
-  align-items: center;
-  display: flex;
-  margin-right: 100px;
-  list-style: none;
-}
-
 
 .foot{
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: center;
-  font-family: 'Roboto Slab', serif;
-
-  
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: bold;
   background: #80CBC4;
   color: rgb(12, 12, 12);
 
@@ -70,14 +53,19 @@ a:hover
   display: list-item;
   justify-content: start;
   min-height: "10vh";
-  padding-bottom: 10px;
+  background: rgb(18, 131, 120);
+  color: black; 
+}
+.footer ul,h5{
+  margin-bottom: 0em;
+}
+.footerL ul li{
+ 
   padding-top: 5px;
   margin-top: auto;
   padding-left: 20px;
   background: rgb(18, 131, 120);
-  color: black;
-  font: caption;
-  
+  color: black; 
 }
 .footerR{
   display: flex;
@@ -86,13 +74,13 @@ a:hover
   background: rgb(18, 131, 120);;
   margin-top: auto;
   color: black;
-  font: caption;
-  border: blueviolet;
+  
 }
 .headerarea
 {
   display: flex;
-align-items: center;   
+align-items: center; 
+padding-top: 10vh;  
 padding-left:200px;
 text-align: center;
 }
@@ -114,7 +102,7 @@ padding-left: 180px;
  .chartsarea
  {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding-top: 100px;
   
   flex-wrap: wrap;
@@ -158,14 +146,28 @@ width: 100;
   padding-top: 10vh;
  }
   
- @media only screen and (max-width:800px)
+ @media only screen and (max-width:650px)
  {
-   .chartsarea,.aboutarea,.mapsarea,.distrarea,.homearea
-   {
-    padding-left: 10vw;
+  .chartsarea
+  {
+    padding-left: 60px;
     padding-right: 0vw;
     padding-top: 0vh;
    }
+   .aboutarea,.homearea,
+   .mapsarea,.distrarea
+   {
+    padding-left: 60px;
+    padding-right: 0vw;
+    padding-top: 0vh;
+   }
+   canvas{
+    max-height: 1000px;
+    max-width: 650px;
+    text-align: -webkit-center;
+
+   }
+   
    .nav-links
    {
     font-size: 1rem;
@@ -179,8 +181,48 @@ width: 100;
    .headerarea
    {
      display: flex;
+     margin-top: 70px;
    align-items: center;   
    padding-left:20vw;
    text-align: center;
    }
+   .footer
+   {
+     margin-left: 50px;
+     margin-right: 0em;
+   }
+.foot{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif;
+  background: #80CBC4;
+  color: rgb(12, 12, 12);
+  
+  /* margin-left: 60px; */
+  margin-right: 0em;
+  width: 100%;
+}
+ .footerL{
+  display: flex-start;
+  /* justify-content: start; */
+  /* margin-left: 60px; */
+  padding-bottom: 10px;
+  padding-top: 5px;
+  background: rgb(18, 131, 120);
+  color: black;
+  margin-left: 0;
+  margin-right: 0em;
+  width: 100%;
+}
+.footerR{
+  display: flex;
+  justify-content: center;
+  background: rgb(18, 131, 120);;
+  color: black;
+  margin-right: 0em;
+  width: 100%;
+ 
+}
  }

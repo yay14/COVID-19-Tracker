@@ -16,29 +16,26 @@ export default function SideNav()
                         <div class="three"></div>
                     </div>
                 </div>
-                <div class="menu">
-                    <div class="logo">
-                        <h3>COVID-19 TRACKER</h3>
-      </div>
-                    <div className="row">
-                        <ul className="col nav-links">
-                            <Link to='/' style={{ color: "white", textDecoration: "none" }}><li>India  <Emoji symbol="🌍" /></li></Link>
-                            <Link to='/global' style={{ color: "white", textDecoration: "none" }}><li>Global</li></Link>
+                <div class="menu" >
+                <div className="logo ">
+                </div>
+                        <ul  class=" nav-links row" >
+                            <div ><Link to='/' style={{textDecoration: "none" }}><li>India  <Emoji symbol="🌍" /></li></Link></div>
+                            
+                            <div ><Link to='/global' style={{ textDecoration: "none" }}><li>Global</li></Link></div>
+                            
                         </ul>
-                    </div>
+                    
                 </div>
             </div>
 
             <div class="main_container">
                 <div class="sidebar">
                     <div class="sidebar__inner">
-                        <div class="profile">
-
                             <div class="profile_info">
                                 <p>Welcome</p>
 
                             </div>
-                        </div>
                         <ul>
                           
                             <li>
@@ -77,9 +74,7 @@ export default function SideNav()
                         </ul>
                     </div>
                 </div>
-                <div class="container">
-
-                </div>
+              
             </div>
 
         </div>

@@ -4,14 +4,16 @@ import './App.css';
 
 export default function Foot() {
 return(
-<div style={{marginLeft: "80px"}}>
+<div class="footer">
  <div className="footerL">
- <h5>Quick Links</h5>
- <p>GitHub : <a href="https://github.com/yay14/COVID-19-Tracker"><i class="fab fa-github-square icon-2x" ></i></a></p>
- <p>LinkedIn : <a href="https://www.linkedin.com/in/shreya-raj-193827169/"><i class="fab fa-linkedin icon-2x"></i></a></p>
+ <h5>Quick Links
+   <ul>
+ <li>GitHub : <a href="https://github.com/yay14/COVID-19-Tracker"><i class="fab fa-github-square icon-2x" ></i></a></li>
+ <li>LinkedIn : <a href="https://www.linkedin.com/in/shreya-raj-193827169/"><i class="fab fa-linkedin icon-2x"></i></a></li>
+ </ul></h5>
  </div>
  <div className="footerR">
- <h5>Contact Us </h5>
+
  <span aria-hidden="true" role="img">📧</span>
 
  <h6> Email : rajshreya183@gmail.com</h6>
