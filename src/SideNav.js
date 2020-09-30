@@ -4,6 +4,7 @@ import './App.css'
 import {Link} from 'react-router-dom'
 import Emoji from 'a11y-react-emoji'
 
+
 export default function SideNav()
 {
     return(
