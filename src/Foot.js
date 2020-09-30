@@ -6,7 +6,7 @@ export default function Foot() {
 return(
 <div class="footer">
  <div className="footerL">
- <h5>Quick Links
+ <h5> Quick Links
    <ul>
  <li>GitHub : <a href="https://github.com/yay14/COVID-19-Tracker"><i class="fab fa-github-square icon-2x" ></i></a></li>
  <li>LinkedIn : <a href="https://www.linkedin.com/in/shreya-raj-193827169/"><i class="fab fa-linkedin icon-2x"></i></a></li>
