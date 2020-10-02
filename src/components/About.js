@@ -7,8 +7,7 @@ export default function About() {
         <h1 className='text-center'>About COVID-19 <img src={corona} alt="corona-virus"></img></h1>
         
         <h3>COVID-19 Coronavirus - Symptoms</h3>
-        <p>There’s currently no vaccine to prevent coronavirus disease (COVID-19).</p>
-        <p>
+       
 Check Situation
 If you develop a fever, cough, and have difficulty breathing, promptly seek medical care.
 Call in advance and tell your health provider as soon as possible for medical advice.
