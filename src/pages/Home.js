@@ -70,7 +70,7 @@ class Home extends React.Component {
             <div style={{justifyContent:"center",display:"flex"}}>
               <ScaleLoader
            
-                size={50}
+                size={80}
                 color={"#004D40"}
                 loading={this.state.load}
               />
