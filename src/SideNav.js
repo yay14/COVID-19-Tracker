@@ -20,9 +20,9 @@ export default function SideNav()
                 <div className="logo ">
                 </div>
                         <ul  class=" nav-links row" >
-                            <div ><Link to='/' style={{textDecoration: "none" }}><li>India  <Emoji symbol="🌍" /></li></Link></div>
+                            <div ><li><Link to='/' style={{textDecoration: "none" }}>India  <Emoji symbol="🌍" /></Link></li></div>
                             
-                            <div ><Link to='/global' style={{ textDecoration: "none" }}><li>Global</li></Link></div>
+                            <div ><li><Link to='/global' style={{ textDecoration: "none" }}>Global</Link></li></div>
                             
                         </ul>
                     
@@ -67,7 +67,7 @@ export default function SideNav()
                             <li>
                                 <a href="#about">
                                     <span class="icon"><i class="fab fa-elementor"></i></span>
-                                    <span class="title">About</span>
+                                    <span class="title">Headlines</span>
                                 </a>
                             </li>
 

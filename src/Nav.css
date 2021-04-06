@@ -112,7 +112,6 @@
 }
 .nav-links a{
 
-  transition: color 0.2s;
   font-size: 1.2rem;
   color: rgb(7, 97, 59);
   margin-bottom: 10px;
@@ -121,7 +120,10 @@
   color: whitesmoke;
   
  }
-
+ .nav-links a:active {
+  color: whitesmoke;
+  
+ }
 
 .main_container .sidebar ul li a{
   color: #fff;

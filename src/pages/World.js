@@ -2,13 +2,12 @@ import React from 'react';
 import Axios from 'axios'
 import ScaleLoader from "react-spinners/ScaleLoader"
 import moment from 'moment';
-import About from '../components/About.js'
 import CardsWorld from '../components/CardsWorld'
 import CountriesTable from '../components/CountriesTable'
 import WorldMap from '../components/WorldMap'
 import CountryPicker from "../components/CountryPicker"
 import WorldCharts from "../components/WorldCharts"
-import PerfectScrollbar from 'react-perfect-scrollbar'
+import News from '../components/News.js';
 
 class World extends React.Component {
   state = {  
@@ -101,13 +100,12 @@ class World extends React.Component {
     var time1 = moment(this.state.date, "YYYY-MM-DDTHH:mm:ss.SSS");
     var date = moment(time1,'DD/MM/YYYY HH:mm:ss.SSS').format('LL');
   return (
-    <PerfectScrollbar>
     <div className="App">
       <div className="wrap">
         <div  id="home" >
           <div className="row headerarea">
             <div className="col">
-              <h3>LIVE : Worldwide Spread of Corona-Virus <span aria-hidden="true" role="img">🌐</span></h3>
+              <h3> Worldwide Spread of Corona-Virus <span aria-hidden="true" role="img">🌐</span></h3>
             </div>
          
             <div className="col">
@@ -152,12 +150,11 @@ class World extends React.Component {
          
           <hr />
           <div className="aboutarea" id="about">
-            <About />
+            <News />
           </div>
         
       </div>
       </div>
-      </PerfectScrollbar>
   );
 }
 }

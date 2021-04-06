@@ -1,15 +1,13 @@
 import React  from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'
 import ReactCountryFlag from "react-country-flag"
 import Axios from 'axios'
 import LiveGraph from '../components/LiveGraph.js'
 import SearchState from '../components/SearchState.js'
 import TestedGraph from '../components/TestedGraph.js'
 import IndiaMap from '../components/IndiaMap.js'
-import About from '../components/About.js'
 import CardsIndia from '../components/CardsIndia'
 import ScaleLoader from "react-spinners/ScaleLoader"
-import PerfectScrollbar from 'react-perfect-scrollbar'
+import News from '../components/News.js';
 
 class Home extends React.Component {
   state = {  
@@ -46,14 +44,13 @@ class Home extends React.Component {
  
   render() {
   return (
-    <PerfectScrollbar>
     <div className="App">
       <div className="wrap">
         
         <div  id="home" >
           <div className="row headerarea">
             <div className="col"  class="logo">
-              <h3>LIVE : Corona-Virus in INDIA
+              <h3> Corona-Virus in INDIA
                 <ReactCountryFlag countryCode="IN"
                   svg
                   style={{
@@ -100,12 +97,11 @@ class Home extends React.Component {
          
           <hr />
           <div className="aboutarea" id="about">
-            <About />
+            <News />
           </div>
       </div>
       </div>
       
-      </PerfectScrollbar>
   );
 }
 }
