@@ -1,5 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'react-perfect-scrollbar/dist/css/styles.css';
+import PerfectScrollbar from 'react-perfect-scrollbar'
 import Home from './pages/Home.js'
 import World from './pages/World.js'
 import Foot from './Foot'
@@ -9,6 +11,7 @@ import SideNav from './SideNav'
 
 export default function App() { 
   return (
+    <PerfectScrollbar>
     <div>
     <Router>
     <SideNav/>
@@ -23,7 +26,7 @@ export default function App() {
     </Router>
    
     </div>
-    
+    </PerfectScrollbar>
   );
 }
 

@@ -7,31 +7,6 @@
 .wrap{
   Flex:1;
 }
-html{
-  scroll-behavior: smooth;
-}
-body::-webkit-scrollbar
-{
-  width: 0.25%;
-}
-body::-webkit-scrollbar-track
-{
-background: black;
-}
-body::-webkit-scrollbar-thumb
-{
-background:#80CBC4;
-}
-body div::-webkit-scrollbar{
-  width: 0.25rem;
-  height: 0.25rem;
-}
-body div::-webkit-scrollbar-thumb{
-  background: #80CBC4;
-}
-body div::-webkit-scrollbar-track{
-  background: black;
-}
 .footer{
   margin-left: 80px;
   margin-right: 0em;

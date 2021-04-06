@@ -9,6 +9,7 @@ import IndiaMap from '../components/IndiaMap.js'
 import About from '../components/About.js'
 import CardsIndia from '../components/CardsIndia'
 import ScaleLoader from "react-spinners/ScaleLoader"
+import PerfectScrollbar from 'react-perfect-scrollbar'
 
 class Home extends React.Component {
   state = {  
@@ -45,8 +46,10 @@ class Home extends React.Component {
  
   render() {
   return (
+    <PerfectScrollbar>
     <div className="App">
       <div className="wrap">
+        
         <div  id="home" >
           <div className="row headerarea">
             <div className="col"  class="logo">
@@ -85,7 +88,7 @@ class Home extends React.Component {
               <h4>New cases, Recovered, Deaths overtime</h4>
               <LiveGraph times={this.state.times} /></div>
             <div className="col-sm-6">
-              <h4>Rate of growth of Corona Positively Tested</h4>
+              <h4>Covid-19 Tests Conducted Daily</h4>
               <TestedGraph tested={this.state.tested} />
             </div>
           </div >
@@ -99,9 +102,10 @@ class Home extends React.Component {
           <div className="aboutarea" id="about">
             <About />
           </div>
-        
       </div>
       </div>
+      
+      </PerfectScrollbar>
   );
 }
 }

@@ -14,7 +14,7 @@ export default function TestedGraph(props)
             if(data.testpositivityrate!=="")
            return( 
              dates.push(date),
-             testedpositiverate.push(data.testpositivityrate)
+             testedpositiverate.push(data.dailyrtpcrsamplescollectedicmrapplication)
            )
            else
            return(dates,testedpositiverate)

@@ -1,5 +1,4 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css'
 import Axios from 'axios'
 import ScaleLoader from "react-spinners/ScaleLoader"
 import moment from 'moment';
@@ -9,7 +8,7 @@ import CountriesTable from '../components/CountriesTable'
 import WorldMap from '../components/WorldMap'
 import CountryPicker from "../components/CountryPicker"
 import WorldCharts from "../components/WorldCharts"
-
+import PerfectScrollbar from 'react-perfect-scrollbar'
 
 class World extends React.Component {
   state = {  
@@ -102,6 +101,7 @@ class World extends React.Component {
     var time1 = moment(this.state.date, "YYYY-MM-DDTHH:mm:ss.SSS");
     var date = moment(time1,'DD/MM/YYYY HH:mm:ss.SSS').format('LL');
   return (
+    <PerfectScrollbar>
     <div className="App">
       <div className="wrap">
         <div  id="home" >
@@ -157,6 +157,7 @@ class World extends React.Component {
         
       </div>
       </div>
+      </PerfectScrollbar>
   );
 }
 }
