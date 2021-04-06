@@ -35,16 +35,16 @@ const dataSource = {
                 {
                     minvalue: "0.0",
                     maxvalue: "500.0",
-                    color: "#3df56c"
+                    color: "#ffffff"
                 },
                 {
                     minvalue: "500.0",
-                    maxvalue: "25000.0",
+                    maxvalue: "1000000.0",
                     color: "#fab561"
                 },
                 {
-                    minvalue: "25000.0",
-                    maxvalue: "400000.0",
+                    minvalue: "1000000.0",
+                    maxvalue: "5000000.0",
                     color: "#f54c4c"
                 }
             ]

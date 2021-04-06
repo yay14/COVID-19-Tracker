@@ -34,7 +34,7 @@ export default function WorldMap(props){
         options={{
             // region: 'IT',
             // displayMode: 'markers',
-            colorAxis: { colors: ['mediumseagreen'] },
+            colorAxis: { colors: ['crimson'] },
           }}
         data={data}
       />
