@@ -85,23 +85,42 @@ padding-left: 180px;
   padding-left: 230px;
   padding-right: 100px;
  }
- .aboutarea
-{
- 
-display: flex;
-align-items: center;
-padding-top: 50px;
-flex-wrap: wrap;
-font-size: smaller;
-flex-direction: row;
-width: 100;
-padding-left: 250px;
-padding-right: 200px;
-}
+
 canvas{
   max-height: 600px; max-width: 800px;
   text-align:-webkit-center;
 }
+
+.newsContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.news{
+  display: flex;
+  width: '100%';
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-numbers {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-numbers > li {
+  margin-right: 0.5em;
+  color: rgb(130, 199, 176);
+  font-size: large;
+  user-select: none;
+  cursor: pointer;
+}
+
 .homearea
 {
 display: flex;
@@ -129,7 +148,7 @@ width: 100;
     padding-right: 0vw;
     padding-top: 0vh;
    }
-   .aboutarea,.homearea,
+   .homearea,
    .mapsarea,.distrarea
    {
     padding-left: 60px;

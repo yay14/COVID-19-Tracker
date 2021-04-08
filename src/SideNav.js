@@ -65,7 +65,7 @@ export default function SideNav()
                                 </a>
                             </li>
                             <li>
-                                <a href="#about">
+                                <a href="#news">
                                     <span class="icon"><i class="fab fa-elementor"></i></span>
                                     <span class="title">Headlines</span>
                                 </a>

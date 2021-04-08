@@ -149,7 +149,7 @@ class World extends React.Component {
               <br /><WorldMap country={this.state.countries} /></div> 
          
           <hr />
-          <div className="aboutarea" id="about">
+          <div id="news">
             <News />
           </div>
         

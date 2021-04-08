@@ -96,7 +96,7 @@ class Home extends React.Component {
               <br /><IndiaMap states={this.state.states} /></div>
          
           <hr />
-          <div className="aboutarea" id="about">
+          <div  id="news">
             <News />
           </div>
       </div>
